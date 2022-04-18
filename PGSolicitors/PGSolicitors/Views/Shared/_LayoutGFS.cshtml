@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+  
+</head>
+
+<body>
+    <div class="layout-container main row-fluid">
+
+        <div class="header-container row-fluid">
+            @Html.Partial("_Header")
+        </div>
+        <div class="main-menu-bar">
+          
+        </div>
+        <div class="responsive-main-nav">
+            <div class="responsive-menu-bar">
+                <i class="icon icon-menu"></i> MENU
+            </div>
+            <div class="responsive-menu">
+               
+            </div>
+        </div>
+        <div class="main-content-container row-fluid">
+            <div class="row-fluid">
+                <div class="row-fluid">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="~/Images/main-slider-images/slide-1.jpg" />
+                        </div>
+                        <div class="item">
+                            <img src="~/Images/main-slider-images/slide-2.jpg" />
+                        </div>
+                        <div class="item">
+                            <img src="~/Images/main-slider-images/slide-3.jpg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <div class="footer row-fluid">
+           
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".responsive-menu-bar").on("click", function () {
+                $(".responsive-menu").toggle();
+            });
+        });
+    </script>
+</body>
+</html>
