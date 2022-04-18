@@ -145,6 +145,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\global.css" />
+    <Content Include="Content\global.min.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\ckeditor\adapters\jquery.js" />
@@ -278,6 +280,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="Content\global.scss" />
     <None Include="packages.config" />
     <Content Include="Scripts\ckeditor\yarn.lock" />
     <Content Include="Scripts\ckeditor\skins\moono-lisa\readme.md" />
@@ -287,8 +290,7 @@
     <Content Include="Scripts\ckeditor\CHANGES.md" />
     <Content Include="Views\Index.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
-    <Content Include="Views\Shared\_LayoutGFS.cshtml" />
-    <Content Include="Views\Shared\_LayoutGFSSimple.cshtml" />
+    <Content Include="Views\Shared\_LayoutS.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
