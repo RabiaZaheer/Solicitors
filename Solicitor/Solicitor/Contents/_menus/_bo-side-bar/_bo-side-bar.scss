@@ -1,0 +1,70 @@
+﻿@import '../../_mixin/_mixin.scss';
+$background: #C52C02;
+$color: #fff;
+$border-bottom: 1px solid $color;
+$main-break: 999px;
+$main-break-show: 1000px;
+
+.bo-nav-responsive {
+    display: none;
+    width: 100%;
+    height: auto;
+    background: $background;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 1px solid #fff;
+
+    .bo-nav-responsive-inner {
+        padding: 10px;
+
+        > .icon:before {
+            font-size: 20px;
+            color: #fff;
+            font-weight: normal;
+        }
+    }
+
+    @media only screen and (max-width:$main-break) {
+        display: block;
+    }
+}
+
+.bo-nav {
+    > ul {
+        @include ul-reset();
+
+        > li {
+            background: $background;
+            border-bottom: $border-bottom;
+            color: #fff;
+            height: auto;
+            padding: 10px;
+            text-align: left;
+            width: 100%;
+            background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            > a {
+                color: #fff;
+                display: block;
+                font-weight: normal;
+                height: auto;
+                width: 100%;
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media only screen and (min-width:$main-break-show) {
+        display: block !important;
+    }
+
+    @media only screen and (max-width:$main-break) {
+        display: none;
+    }
+}

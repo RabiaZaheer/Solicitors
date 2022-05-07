@@ -1,0 +1,71 @@
+﻿$background: #C52C02;
+$color: #C52C02;
+$font-size: 13px;
+$form-break: 799px;
+
+.form {
+    > fieldset {
+        .table {
+            border: none;
+
+            .table-row {
+                border: none;
+
+                @media only screen and (max-width:$form-break) {
+                    display: table;
+                }
+
+                .table-cell.empty {
+                    @media only screen and (max-width:$form-break) {
+                        display: none;
+                    }
+                }
+
+                .table-cell {                    
+                    font-size: $font-size;
+                    padding: 3px 0;
+                    text-align: left;
+
+                    @media only screen and (max-width:$form-break) {
+                        display: table-row;
+                    }
+
+                    .btn {
+                        margin-top: 10px;
+                    }
+
+                    .res-row-pad {
+                        position: relative;
+
+                        @media only screen and (max-width:$form-break) {
+                            padding-bottom: 8px;
+                        }
+
+                        .txtbox,
+                        .ddl {
+                            @media only screen and (max-width:$form-break) {
+                                max-width: 100%;
+                            }
+                        }
+                    }
+
+                    &:nth-child(1) {
+                        width: 30%;
+
+                        @media only screen and (max-width:$form-break) {
+                            width: 100%;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        width: 70%;
+
+                        @media only screen and (max-width:$form-break) {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

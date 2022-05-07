@@ -1,0 +1,172 @@
+﻿@import '../../_mixin/_mixin.scss';
+
+$background-color: #C52C02;
+$color: #2e2e30;
+$main-break: 979px;
+
+.responsive-main-nav {
+    font-size: 18px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: none;
+
+    @media only screen and (max-width:$main-break) {
+        display: block;
+    }
+
+    .responsive-menu-bar {
+        background: #C52C02;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        color: #fff;
+        cursor:pointer;
+        font-weight:700;
+
+        > .icon:before {
+            color: #fff;
+        }
+    }
+
+    .responsive-menu {
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+
+    > ul {
+        @include ul-reset();
+
+        > li {
+            border-bottom: 1px solid #ddd;
+            color: $color;
+
+            > a {
+                color: $color;
+                padding: 10px;
+            }
+
+            .icon:before {
+                color: $color;
+            }
+
+            ul {
+                @include ul-reset();
+
+                li {
+
+                    > .heading {
+                        //border-bottom: 1px solid #ddd;
+                        color: $color;
+                        padding: 10px;
+                    }
+
+                    > a {
+                        color: $color;
+                        padding: 10px;
+                    }
+
+                    ul {
+                        li {
+                            border-bottom: 1px solid #ddd;
+                            color: $color;
+
+                            .service-sub-heading {
+                                padding: 10px 10px 10px 30px;
+                                border-bottom: 1px solid #ddd;
+                            }
+
+                            .team-members {
+                                padding: 10px 10px 10px 30px;
+                            }
+
+                            .service-sub-heading-a {
+                                padding: 10px 10px 10px 40px;
+                            }
+
+                            &:last-child {
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        > li.menu-service {
+            ul {
+                li {
+                    .heading-icon {
+                        //border-bottom: 1px solid #ddd;
+                        color: $color;
+                        overflow: hidden;
+
+                        .heading {
+                            float: left;
+                            width: 90%;
+                            padding: 10px;
+                        }
+
+                        > .icon {
+                            width: 10%;
+                            float: left;
+                            text-align: center;
+                            padding: 12px;
+                        }
+                    }
+
+                    .sub-heading-title {
+                        display: none;
+                    }
+
+                    .sub-services {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        > li.menu-team {
+            ul {
+                li {
+                    //border-bottom: 1px solid #ddd;
+                    .heading-icon {
+                        //border-bottom: 1px solid #ddd;
+                        color: $color;
+                        overflow: hidden;
+
+                        .heading {
+                            float: left;
+                            width: 90%;
+                            padding: 10px;
+                        }
+
+                        > .icon {
+                            width: 10%;
+                            float: left;
+                            text-align: center;
+                            padding: 12px;
+                        }
+                    }
+
+                    ul.sub-menu-team {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        > li.menu-pages {
+            > ul {
+                > li {
+                    > ul {
+                        > li {
+                            //border-bottom: 1px solid #ddd;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

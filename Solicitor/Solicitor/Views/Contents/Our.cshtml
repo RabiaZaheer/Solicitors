@@ -1,0 +1,21 @@
+﻿@model Solicitor.Models.Content
+
+@{
+    ViewBag.Title = "Our Content";
+    Layout = "~/Views/Shared/_LayoutSSimple.cshtml";
+}
+<div class="content-detail row-fluid">
+
+    <div class="left">
+        <h2>@Model.Title.ToUpper()</h2>
+        <div class="row-fluid">
+            @Html.Raw(Model.Details)
+        </div>
+    </div>
+    <div class="right">
+        <div class="news-services row-fluid">
+          
+        </div>
+    </div>
+
+</div>

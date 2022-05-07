@@ -1,0 +1,7 @@
+﻿@model IEnumerable<Solicitor.Models.Link>
+<ul>
+    @foreach (var link in Model)
+    {
+        <li><a href="@link.Url">@link.Title</a></li>
+    }
+</ul>

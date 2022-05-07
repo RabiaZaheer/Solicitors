@@ -1,0 +1,58 @@
+﻿$background: #C52C02;
+$color: #C52C02;
+$font-size: 13px;
+
+.view-content {
+    padding-bottom: 20px;    
+
+    .create-content {
+        color: $color;
+        font-size: 13px;
+        text-align: right;
+    }
+
+    > .table.list {       
+
+        .table-row {            
+
+            .sr {
+                width: 5%;
+                text-align: right;
+            }
+
+            .title {
+                width: 20%;
+                text-align: left;
+            }
+
+            .page-url {
+                width: 20%;
+                text-align: left;
+            }
+
+            .parent-page {
+                width: 20%;
+                text-align: left;
+            }
+
+            .status {
+                width: 15%;
+                text-align: center;
+            }
+
+            .edit {
+                width: 10%;
+                text-align: center;
+            }
+
+            .delete {
+                width: 10%;
+                text-align: center;
+            }
+
+            .sr.heading {
+                text-align: center;
+            }
+        }
+    }
+}

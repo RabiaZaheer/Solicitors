@@ -1,0 +1,35 @@
+﻿@import '../_mixin/_mixin.scss';
+
+$primary-color: #C52C02;
+$secondary-color: #303133;
+
+.custom-bread-crumb {
+    margin: 20px 0;
+
+    > ul {
+        @include ul-reset();
+
+        > li {
+            display: inline-block;
+            height: auto;
+            width: auto;
+
+            > a {
+                display: inline-block;
+                height: auto;
+                width: auto;
+                color: $primary-color;
+
+                &:hover {
+                    font-weight: 700;
+                    color: $secondary-color;
+                }
+            }
+        }
+
+        > li.seperator {
+            padding: 0 5px;
+            color: $color;
+        }
+    }
+}

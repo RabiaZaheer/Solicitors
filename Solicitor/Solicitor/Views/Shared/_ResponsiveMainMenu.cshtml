@@ -1,0 +1,46 @@
+﻿<nav class="responsive-main-nav row-fluid">
+    <ul>
+        <li><a href="/Solicitor/default/index">Home</a></li>
+        <li>@Html.ActionLink("About Us", "Our", "Contents", new { pageUrl = "About-Us" }, null)</li>
+        <li class="menu-service">
+            <ul>
+                <li>
+                    <div class="heading-icon">
+                        <div class="heading">Services</div>
+                        <i class="icon icon-close"></i>
+                    </div>
+                    <ul class="sub-heading-title">
+                        <li>
+                         
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="menu-team">
+            <ul>
+                <li>                    
+                    <div class="heading-icon">
+                        <div class="heading">Our Team</div>
+                        <i class="icon icon-close"></i>
+                    </div>
+                    <ul class="sub-menu-team">
+                        <li>
+                           
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="/Solicitor/Jobs/All">Join Us</a></li>
+        <li><a href="/Solicitor/Contact/Index">Contact Us</a></li>
+        <li class="menu-pages">
+            <ul>
+                <li>
+                    @{ Html.RenderAction("GetResponsiveLinks", "Layout"); }
+                </li>
+            </ul>
+        </li>
+        <li class="make-a-claim"><a href="/Solicitor/Claim/MakeAClaim">Make a Claim</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,40 @@
+﻿$background: #C52C02;
+$color: #000;
+$color-hover: #fff;
+$not-active-background: #ddd;
+
+.pagination {
+    padding: 10px 0;
+    text-align: right;
+
+    .page {
+        color: $color;
+        display: inline-block;
+        padding: 5px 10px 7px 10px;
+        text-decoration: none;
+        transition: background-color .3s;
+        width: auto;
+        background-color: $not-active-background;
+        font-size: 12px;
+
+        &:hover:not(.active) {
+            background-color: $background;
+            color: $color-hover;
+        }
+    }
+
+    .page-active {
+        background-color: $background;
+        color: $color-hover;
+    }
+
+    .btn-next,
+    .btn-previous {
+        background-color: $background;
+        color: $color-hover;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

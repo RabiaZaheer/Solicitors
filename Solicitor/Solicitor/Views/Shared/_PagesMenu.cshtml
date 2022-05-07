@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Solicitor.Models.Link>
+
+@foreach (var link in Model)
+{
+    <div class="menu-pages-content-inner">
+        <a href="@link.Url">@link.Title</a>
+    </div>
+}

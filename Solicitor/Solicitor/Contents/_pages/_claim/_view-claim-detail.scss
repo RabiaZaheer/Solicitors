@@ -1,0 +1,28 @@
+﻿$heaing-background-color: #ddd;
+
+.view-claims-detail {
+    border: 1px solid $heaing-background-color;
+    border-left: none;
+
+    > .table {
+        > .table-row {
+            > .heading {
+                font-weight: 600;
+                background: $heaing-background-color;
+            }
+
+            > .table-cell {
+                text-align: left;
+                padding: 10px;
+
+                &:nth-child(1) {
+                    width: 20%;
+                }
+
+                &:nth-child(2) {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
