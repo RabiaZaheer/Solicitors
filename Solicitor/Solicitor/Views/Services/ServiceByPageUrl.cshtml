@@ -1,0 +1,26 @@
+﻿@model Solicitor.Models.SubService
+    @{ 
+        ViewBag.Title = "Service";
+        Layout = "~/Views/Shared/_LayoutSSimple.cshtml";
+    }
+
+<div class="detail-service-area row-fluid">
+   
+    <div class="left">
+        <h2>@Model.Title.ToString()</h2>
+        <div class="detail">
+            @Html.Raw(Model.Description)
+        </div>
+    </div>
+    <div class="right">
+        <div class="side-bar">
+            <div class="row-fluid">
+               
+            </div>
+            <div class="news-services row-fluid">
+                <div class="services row-fluid">@{ Html.RenderAction("AllServices", "Services");}</div>
+                <div class="news row-fluid">@{ Html.RenderAction("AllNews");}</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿@using Solicitor.Models
+@model IEnumerable<Service>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutSSimple.cshtml";
+}
+
+<div class="container-service-area row-fluid">
+    <h2>Our Services</h2>
+
+    @foreach (var area in Model)
+    {
+        <div class="box-outer row-fluid">
+            <div class="circle">
+                <i class="icon @area.IconTitle"></i>
+            </div>
+            <div class="box">
+                <a href="~/Services/Service/@area.PageUrl" class="overlay">
+                    <div class="heading">
+                        @area.Title
+                    </div>
+                    <div class="info">
+                        @Html.Raw(area.ShortDescription.ToString())
+                    </div>
+                </a>
+            </div>
+        </div>
+    }
+
+</div>

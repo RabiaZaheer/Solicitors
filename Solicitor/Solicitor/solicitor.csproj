@@ -152,47 +152,6 @@
     <Content Include="asserts\icons.css" />
     <Content Include="Contents\global.css" />
     <Content Include="Contents\global.min.css" />
-    <Content Include="Contents\themes\base\accordion.css" />
-    <Content Include="Contents\themes\base\all.css" />
-    <Content Include="Contents\themes\base\autocomplete.css" />
-    <Content Include="Contents\themes\base\base.css" />
-    <Content Include="Contents\themes\base\button.css" />
-    <Content Include="Contents\themes\base\core.css" />
-    <Content Include="Contents\themes\base\datepicker.css" />
-    <Content Include="Contents\themes\base\dialog.css" />
-    <Content Include="Contents\themes\base\draggable.css" />
-    <Content Include="Contents\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Contents\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Contents\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Contents\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Contents\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Contents\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Contents\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Contents\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Contents\themes\base\images\ui-icons_222222_256x240.png" />
-    <Content Include="Contents\themes\base\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Contents\themes\base\images\ui-icons_444444_256x240.png" />
-    <Content Include="Contents\themes\base\images\ui-icons_454545_256x240.png" />
-    <Content Include="Contents\themes\base\images\ui-icons_555555_256x240.png" />
-    <Content Include="Contents\themes\base\images\ui-icons_777620_256x240.png" />
-    <Content Include="Contents\themes\base\images\ui-icons_777777_256x240.png" />
-    <Content Include="Contents\themes\base\images\ui-icons_888888_256x240.png" />
-    <Content Include="Contents\themes\base\images\ui-icons_cc0000_256x240.png" />
-    <Content Include="Contents\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Contents\themes\base\images\ui-icons_ffffff_256x240.png" />
-    <Content Include="Contents\themes\base\jquery-ui.css" />
-    <Content Include="Contents\themes\base\jquery-ui.min.css" />
-    <Content Include="Contents\themes\base\menu.css" />
-    <Content Include="Contents\themes\base\progressbar.css" />
-    <Content Include="Contents\themes\base\resizable.css" />
-    <Content Include="Contents\themes\base\selectable.css" />
-    <Content Include="Contents\themes\base\selectmenu.css" />
-    <Content Include="Contents\themes\base\slider.css" />
-    <Content Include="Contents\themes\base\sortable.css" />
-    <Content Include="Contents\themes\base\spinner.css" />
-    <Content Include="Contents\themes\base\tabs.css" />
-    <Content Include="Contents\themes\base\theme.css" />
-    <Content Include="Contents\themes\base\tooltip.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\clients\182614.png" />
@@ -326,35 +285,14 @@
     <Content Include="asserts\font\fontello.woff" />
     <Content Include="asserts\font\fontello.woff2" />
     <Content Include="Contents\global.scss" />
-    <Content Include="Contents\_buttons\_buttons.scss" />
     <Content Include="Contents\_main\_main.scss" />
     <Content Include="Contents\_menus\_bo-side-bar\_bo-side-bar.scss" />
     <Content Include="Contents\_menus\_main-menu\_main-menu.scss" />
     <Content Include="Contents\_menus\_menus.scss" />
-    <Content Include="Contents\_mixin\_mixin.scss" />
-    <Content Include="Contents\_pages\_claims.scss" />
-    <Content Include="Contents\_pages\_claim\_default-claim.scss" />
-    <Content Include="Contents\_pages\_claim\_default-make-a-claim.scss" />
-    <Content Include="Contents\_pages\_contact-information.scss" />
-    <Content Include="Contents\_pages\_contact-us\_default-contact-us.scss" />
-    <Content Include="Contents\_pages\_content-pages.scss" />
-    <Content Include="Contents\_pages\_content\_default-content.scss" />
-    <Content Include="Contents\_pages\_default\_default.scss" />
-    <Content Include="Contents\_pages\_form.scss" />
-    <Content Include="Contents\_pages\_layout-backoffice\_layout-backoffice.scss" />
-    <Content Include="Contents\_pages\_layout-main\_layout-main.scss" />
-    <Content Include="Contents\_pages\_links.scss" />
-    <Content Include="Contents\_pages\_list.scss" />
-    <Content Include="Contents\_pages\_location\_default-location.scss" />
-    <Content Include="Contents\_pages\_pages.scss" />
-    <Content Include="Contents\_pages\_status.scss" />
-    <Content Include="Contents\_Pagination\_pagination.scss" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <Content Include="Contents\_breadcrumb\_bread-crumb.scss" />
-    <Content Include="Contents\_pages\_claim\_view-claim-detail.scss" />
     <Content Include="Contents\_menus\_responsive-main-menu\_responsive-main-menu.scss" />
     <None Include="Scripts\jquery-1.4.4-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.4.js" />
@@ -394,6 +332,7 @@
     <Compile Include="Controllers\ContentsController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\LayoutController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="CustomHtmlHelpers\CustomHtmlHelpers.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -409,7 +348,9 @@
     <Compile Include="Models\IRespository.cs" />
     <Compile Include="Models\Link.cs" />
     <Compile Include="Models\Repository.cs" />
+    <Compile Include="Models\Service.cs" />
     <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\SubService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -437,6 +378,8 @@
     <Content Include="Views\Shared\_ResponsiveMainMenu.cshtml" />
     <Content Include="Views\Shared\_ResponsivePageMenu.cshtml" />
     <Content Include="Views\Shared\_LayoutSSimple.cshtml" />
+    <Content Include="Views\Services\AllServices.cshtml" />
+    <Content Include="Views\Services\ServiceByPageUrl.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

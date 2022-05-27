@@ -8,6 +8,7 @@
             Mr,
             Ms,
             Mrs,
+            Master,
             Others
         }
     }
