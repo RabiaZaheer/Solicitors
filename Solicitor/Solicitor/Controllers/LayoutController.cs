@@ -11,10 +11,12 @@ namespace Solicitor.Controllers
     {
       
         private IRespository<Link> respositoryLink;
-
-        public LayoutController( IRespository<Link> link)
+        private IRespository<Service> respositoryService;
+        private IRespository<SubService> respositorySubService;
+        public LayoutController( IRespository<Link> link,IRespository <Service> service,IRespository<SubService> subService)
         {
-            
+            respositoryService = service;
+            respositorySubService = subService;
             respositoryLink = link;
         }
 
@@ -22,9 +24,36 @@ namespace Solicitor.Controllers
         {
             return View();
         }
-             
 
-       
+        [ChildActionOnly]
+        public PartialViewResult GetServices()
+        {
+            IEnumerable<Service> Services = respositoryService.GetAll().Where(s => s.Status == true).ToList();
+            return PartialView("~/Views/Shared/_ServiceMenu.cshtml", Services);
+        }
+
+        [ChildActionOnly]
+        public PartialViewResult GetResponsiveServices()
+        {
+            IEnumerable<Service> Services = respositoryService.GetAll().Where(s => s.Status == true).ToList();
+            return PartialView("~/Views/Shared/_ResponsiveServiceMenu.cshtml", Services);
+        }
+
+        [ChildActionOnly]
+        public PartialViewResult GetSubService(int serviceID)
+        {
+            IEnumerable<SubService> subService = respositorySubService.GetAll().Where(s => s.ServiceID == serviceID);
+            return PartialView("~/Views/Shared/_SubServiceMenu.cshtml", subService);
+        }
+
+        [ChildActionOnly]
+        public PartialViewResult GetResponsiveSubService(int serviceID)
+        {
+            IEnumerable<SubService> subService = respositorySubService.GetAll().Where(s => s.ServiceID == serviceID);
+            return PartialView("~/Views/Shared/_ResponsiveSubServiceMenu.cshtml", subService);
+        }
+
+
 
         [ChildActionOnly]
         public PartialViewResult GetLinks()

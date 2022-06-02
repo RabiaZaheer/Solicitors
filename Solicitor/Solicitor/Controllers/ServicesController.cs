@@ -9,7 +9,7 @@ namespace Solicitor.Controllers
 {
     public class ServicesController : Controller
     {
-      
+
         private IRespository<Service> respositoryService;
         private IRespository<SubService> respositoryServiceDetail;
         private IRespository<News> respositoryNews;
@@ -20,7 +20,6 @@ namespace Solicitor.Controllers
             respositoryServiceDetail = subService;
             respositoryNews = news;
         }
-
         // GET: Services
         public ActionResult Index()
         {
@@ -32,10 +31,25 @@ namespace Solicitor.Controllers
             SubService subService = respositoryServiceDetail.GetAll().FirstOrDefault(x => x.PageUrl == pageUrl);
             return View(subService);
         }
+
+        public PartialViewResult ServiceSiderBar(int serviceID, int serviceDetailID)
+        {
+            IEnumerable<SubService> subService = respositoryServiceDetail.GetAll().Where(x => x.ServiceID == serviceID && x.SubServiceID != serviceDetailID);
+            return PartialView("~/Views/Shared/_RelatedServiceSiderBar.cshtml", subService);
+        }
+
         public ActionResult AllServices()
         {
             IEnumerable<Service> Services = respositoryService.GetAll().ToList();
             return View(Services);
+        }
+
+       
+
+        public PartialViewResult AllService()
+        {
+            IEnumerable<Service> services = respositoryService.GetAll().ToList();
+            return PartialView("~/Views/Shared/_AllServicesSideBar.cshtml", services);
         }
     }
 }

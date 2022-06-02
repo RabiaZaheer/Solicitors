@@ -1,0 +1,33 @@
+﻿@using Solicitor.Models
+@using Solicitor.Models.HelpingMethods;
+@model IEnumerable<Service>
+<style>
+    .column-1,
+    .column-2,
+    .column-3,
+    .column-4,
+    .column-5 {
+        width: 25%;
+        float: left;
+    }
+</style>
+
+@{
+    var counter = 0;
+}
+<div class="menu-services-title">
+
+    <ul class="row-fluid">
+        @foreach (var service in Model)
+        {
+            ++counter;
+            @Html.Raw(HelpingMethod.OpenElement(counter))
+            <li>
+                <h2>@service.Title</h2>
+                @{ Html.RenderAction("GetSubService", "Layout", new { serviceId = service.ServiceID }); }
+            </li>
+            @Html.Raw(HelpingMethod.CloseElement(counter))
+        }
+    </ul>
+
+</div>

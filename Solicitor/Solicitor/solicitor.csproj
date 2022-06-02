@@ -379,7 +379,13 @@
     <Content Include="Views\Shared\_ResponsivePageMenu.cshtml" />
     <Content Include="Views\Shared\_LayoutSSimple.cshtml" />
     <Content Include="Views\Services\AllServices.cshtml" />
-    <Content Include="Views\Services\ServiceByPageUrl.cshtml" />
+    <Content Include="Views\Services\Service.cshtml" />
+    <Content Include="Views\Shared\_ServiceMenu.cshtml" />
+    <Content Include="Views\Shared\_ResponsiveServiceMenu.cshtml" />
+    <Content Include="Views\Shared\_SubServiceMenu.cshtml" />
+    <Content Include="Views\Shared\_RelatedServiceSiderBar.cshtml" />
+    <Content Include="Views\Shared\_AllServicesSideBar.cshtml" />
+    <Content Include="Views\Shared\_ResponsiveSubServiceMenu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

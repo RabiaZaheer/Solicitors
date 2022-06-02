@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Solicitor.Models.SubService>
+
+<ul>
+    @foreach (var subService in Model)
+    {
+        <li>
+            <a href="~/Services/Service/@subService.PageUrl">@subService.Title</a>
+        </li>
+    }
+</ul>

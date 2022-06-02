@@ -1,0 +1,22 @@
+﻿@using Solicitor.Models
+@model IEnumerable<Service>
+
+<div class="menu-services-title">
+
+    <ul class="row-fluid">       
+        @foreach (var service in Model)
+        {          
+        <li>
+            <div class="heading-icon">
+                <div class="heading">@service.Title</div>
+                <i class="icon icon-close"></i>
+            </div>
+            <ul class="sub-services">
+                <li>
+                    @{ Html.RenderAction("GetResponsiveSubService", "Layout", new { serviceId = service.ServiceID }); }
+                </li>
+            </ul>
+        </li>            
+        }
+    </ul>
+</div>

@@ -18,8 +18,9 @@ namespace Solicitor.Models
         public DbSet<News> News { get; set; }
        
         public DbSet<Claim> Claims { get; set; }
-       
-      
+        public DbSet<Service> Services { get; set; }
+        public DbSet<SubService> ServiceDetails { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -52,9 +53,10 @@ namespace Solicitor.Models
                 });
 
 
-          
-
+            //Services
            
+
+
         }
     }
 }

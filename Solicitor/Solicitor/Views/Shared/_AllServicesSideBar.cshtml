@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Solicitor.Models.Service>
+
+@if (Model.Count() > 0)
+{
+    <div class="container-all-service-side-bar row-fluid">
+        <div class="all-service-side-bar row-fluid"> 
+            <h3>OUR SERVICES</h3>
+            <div class="all-service-side-bar-inner row-fluid">
+                @foreach (var service in Model)
+                {
+                    <div class="title">
+                        <div class="table">
+                            <div class="table-cell"><i class="icon icon-ok"></i></div>
+                            <div class="table-cell"><a href="~/Services/Service/@service.PageUrl"> @service.Title</a></div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}
+
