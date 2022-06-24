@@ -398,7 +398,6 @@
     <Folder Include="Areas\" />
     <Folder Include="CustomAttributes\" />
     <Folder Include="Images\Footer\" />
-    <Folder Include="Images\team-members\" />
     <Folder Include="Models\CustomAttributes\" />
   </ItemGroup>
   <PropertyGroup>

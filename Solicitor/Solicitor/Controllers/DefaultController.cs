@@ -11,8 +11,10 @@ namespace Solicitor.Controllers
     {             
        
         private readonly IRespository<News> respositoryNews;
-      
-             
+
+        public DefaultController()
+        {
+        }
 
         public DefaultController(                            
                                 IRespository<News> news
