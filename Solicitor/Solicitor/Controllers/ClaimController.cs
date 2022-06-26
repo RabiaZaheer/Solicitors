@@ -35,7 +35,7 @@ namespace Solicitor.Controllers
 
         
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        
         public ActionResult Claim([Bind(Exclude = "ClaimID")] Claim claim)
         {
             DefautViewModel model = null;
@@ -75,7 +75,7 @@ namespace Solicitor.Controllers
 
         
         [HttpPost]
-        [ValidateAntiForgeryToken]
+       
         public ActionResult MakeAClaim([Bind(Exclude = "ClaimID")] Claim claim)
         {
             if (!ModelState.IsValid)

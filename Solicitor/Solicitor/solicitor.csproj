@@ -338,7 +338,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Claim.cs" />
+    <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Content.cs" />
+    <Compile Include="Models\Country.cs" />
     <Compile Include="Models\DefautViewModel.cs" />
     <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\Gender.cs" />
